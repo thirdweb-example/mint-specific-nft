@@ -1,6 +1,6 @@
 import { NFT } from "../types/NFT";
 
-export let nfts: NFT[] = [
+export const nfts: NFT[] = [
   {
     id: 0,
     name: "NFT 1",
