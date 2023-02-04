@@ -7,14 +7,14 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse
 ) {
-  const sdk = ThirdwebSDK.fromPrivateKey(process.env.PRIVATE_KEY!, "goerli");
-
-  const nftCollection = await sdk.getContract(
-    nftCollectionAddress,
-    "nft-collection"
-  );
-
   if (req.method === "GET") {
+    const sdk = ThirdwebSDK.fromPrivateKey(process.env.PRIVATE_KEY!, "goerli");
+
+    const nftCollection = await sdk.getContract(
+      nftCollectionAddress,
+      "nft-collection"
+    );
+
     try {
       const mintedNfts = await nftCollection?.erc721.getAll();
 
