@@ -41,14 +41,9 @@ const Nft = ({ nft }: { nft: NFT }) => {
 
   return (
     <div className={styles.NFT}>
-      {nft?.url && (
-        <MediaRenderer
-          src={nft.url.replace("ipfs://", "https://ipfs.thirdwebcdn.com/ipfs/")}
-          className={styles.NFTImage}
-        />
-      )}
+      {nft?.url && <MediaRenderer src={nft.url} className={styles.NFTImage} />}
 
-      <div>
+      <div className={styles.textContainer}>
         <h2>{nft?.name}</h2>
         <p>{nft?.description}</p>
         <p>{nft?.price} ETH</p>
