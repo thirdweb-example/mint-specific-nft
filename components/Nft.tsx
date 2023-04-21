@@ -48,7 +48,7 @@ const Nft = ({ nft }: { nft: NFT }) => {
         />
       )}
 
-      <div>
+      <div className={styles.textContainer}>
         <h2>{nft?.name}</h2>
         <p>{nft?.description}</p>
         <p>{nft?.price} ETH</p>

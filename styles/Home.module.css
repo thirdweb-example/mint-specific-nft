@@ -30,8 +30,13 @@
 }
 
 .NFTImage {
-  width: 100%;
-  max-width: 300px;
-  height: auto;
+  max-height: 230px !important;
+  width: 100% !important;
+  object-fit: contain;
   border-radius: 16px;
+}
+
+.textContainer {
+  width: 100%;
+  padding: 10px;
 }
