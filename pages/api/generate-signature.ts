@@ -7,9 +7,13 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   const { id, address } = JSON.parse(req.body);
 
   try {
-    const sdk = ThirdwebSDK.fromPrivateKey(process.env.PRIVATE_KEY!, "goerli", {
-      secretKey: process.env.TW_SECRET_KEY
-    });
+    const sdk = ThirdwebSDK.fromPrivateKey(
+      process.env.WALLET_PRIVATE_KEY!,
+      "goerli",
+      {
+        secretKey: process.env.THIRDWEB_SECRET_KEY,
+      }
+    );
 
     const nftCollection = await sdk.getContract(
       nftCollectionAddress,
