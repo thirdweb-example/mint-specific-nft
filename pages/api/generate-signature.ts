@@ -11,7 +11,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       process.env.WALLET_PRIVATE_KEY!,
       "goerli",
       {
-        secretKey: process.env.THIRDWEB_SECRET_KEY,
+        secretKey: process.env.TW_SECRET_KEY,
       }
     );
 

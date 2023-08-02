@@ -12,7 +12,7 @@ export default async function handler(
       process.env.WALLET_PRIVATE_KEY!,
       "goerli",
       {
-        secretKey: process.env.THIRDWEB_SECRET_KEY,
+        secretKey: process.env.TW_SECRET_KEY,
       }
     );
 
